@@ -4,7 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 const {
   getAllProducts,
@@ -39,6 +39,9 @@ express()
   // REST endpoints?
   // .get("/test", (req, res) => res.status(200).json("hello from server"))
 
+  .get("/api/", (req, res) => {
+    res.send('Hello World!');
+  })
   .get("/api/products", getAllProducts)
   .get("/api/brands", getAllBrands)
   .get("/api/wearables", getAllWearables)
