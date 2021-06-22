@@ -25,7 +25,7 @@ const ProductDetails = ({ handleClickOnCartIcon }) => {
   let { productId } = useParams();
 
   useEffect(() => {
-    fetch(`/api/products/${productId}`)
+    fetch(`https://techactive.herokuapp.com/api/products/${productId}`)
       .then((rest) => rest.json())
       .then((json) => setCurrentItem(json.data));
   }, []);

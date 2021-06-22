@@ -31,25 +31,25 @@ export const AppProvider = ({ children }) => {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
-    fetch("/api/products")
+    fetch("https://techactive.herokuapp.com/api/products")
       .then((rest) => rest.json())
       .then((json) => setProducts(json.data));
   }, []);
 
   useEffect(() => {
-    fetch("/api/brands")
+    fetch("https://techactive.herokuapp.com/api/brands")
       .then((rest) => rest.json())
       .then((json) => setBrands(json.data));
   }, []);
 
   useEffect(() => {
-    fetch("/api/categories")
+    fetch("https://techactive.herokuapp.com/api/categories")
       .then((rest) => rest.json())
       .then((json) => setCategories(json.data));
   }, []);
 
   useEffect(() => {
-    fetch("/api/wearables")
+    fetch("https://techactive.herokuapp.com/api/wearables")
       .then((rest) => rest.json())
       .then((json) => setWearables(json.data));
   }, []);

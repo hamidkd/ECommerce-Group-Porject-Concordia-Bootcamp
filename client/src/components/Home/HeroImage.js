@@ -19,7 +19,7 @@ const HeroImage = () => {
   );
   //setting the featuredProduct in a state
   useEffect(() => {
-    fetch(`api/products/${featuredProductId}`)
+    fetch(`https://techactive.herokuapp.com/api/products/${featuredProductId}`)
       .then((res) => res.json())
       .then((json) => setFeaturedProduct(json.data));
   }, []);

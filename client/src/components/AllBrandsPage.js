@@ -6,7 +6,7 @@ const AllBrandsPage = () => {
   const [brands, setBrands] = useState([]);
 
   useEffect(() => {
-    fetch("/api/brands")
+    fetch("https://techactive.herokuapp.com/api/brands")
       .then((res) => res.json())
       .then((res) => {
         setBrands(res.data);

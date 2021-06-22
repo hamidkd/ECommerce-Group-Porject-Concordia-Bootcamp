@@ -52,7 +52,7 @@ const Checkout = () => {
 
   const updateInventory = () => {
     selectedItems.forEach((item) => {
-      fetch(`api/products/${item.product._id}/update`, {
+      fetch(`https://techactive.herokuapp.com/api/products/${item.product._id}/update`, {
         method: "PATCH",
         headers: {
           Accept: "application/json",
@@ -73,7 +73,7 @@ const Checkout = () => {
   const createOrderHandler = () => {
     setStatus("pending");
 
-    fetch("/api/order", {
+    fetch("https://techactive.herokuapp.com/api/order", {
       method: "POST",
       headers: {
         Accept: "application/json",
