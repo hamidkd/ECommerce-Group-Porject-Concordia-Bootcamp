@@ -3,7 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
-const cors = requite("cors");
+const cors = require("cors");
 
 const PORT = process.env.PORT || 4000;
 
