@@ -1,4 +1,4 @@
-# Wearables E-Commerce Project
+# TechActiv: Wearables E-Commerce Project
 
 Demo: https://www.youtube.com/watch?v=XwwbCloyKL8
 
